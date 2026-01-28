@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshers Party 2026 | The Grand Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="cursor-tag">Guest</div>
+
+    <div id="login-overlay" class="overlay">
+        <div class="login-card">
+            <h1>🎉 Party Entry</h1>
+            <p>Please enter your name to unlock the invitation</p>
+            <input type="text" id="user-name-input" placeholder="Your Name Here...">
+            <button onclick="unlockSite()">Access Invite</button>
+        </div>
+    </div>
+
+    <div id="main-site" style="display: none;">
+        <nav class="navbar">
+            <div class="logo">DIPLOMA FRESHERS PARTY INVITATION<span>-2026</span></div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('Student')">Student</a></li>
+                <li><a href="#" onclick="showPage('Faculty')">Faculty</a></li>
+                <li><a href="#" onclick="showPage('events')">Events</a></li>
+                <li><a href="#" onclick="showPage('venue')">Venue</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="Student" class="page active">
+                <div class="hero">
+                    <h2>You are Cordially Invited!</h2>
+                    <div class="invite-grid">
+                        <img src="student.png" width="400px" height="500px">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="Faculty" class="page">
+                <div class="hero">
+                    <h2>You are Cordially Invited!</h2>
+                    <div class="invite-grid">
+                        <img src="faculty.png" width="400px" height="500px"
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="events" class="page">
+                <h2>The Party Lineup</h2>
+                <br><div class="event-list">
+                    <div class="event-item">⭐  9:30 AM: Arrival of students(freshers)</div>
+                    <div class="event-item">⭐  9:50 AM: Welcoming principal sir</div>
+                    <div class="event-item">⭐  10:00 AM: Lightning of lamp</div>
+                    <div class="event-item">⭐  10:15 AM: Welcome Song</div>
+                    <div class="event-item">⭐  10:30 AM: Welcome Address by Anchoring Team(Introduction of HoD)</div>
+                    <div class="event-item">⭐  10:40 AM: Dance by Seniors</div>
+                    <div class="event-item">⭐  10:50 AM: Introduction of Freshers by Seniors</div>
+                    <div class="event-item">⭐  10:55 AM: A song by Seniors group</div>
+                    <div class="event-item">⭐  11:00 AM: Dance by Freshers</div>
+                    <div class="event-item">⭐  11:10 AM: A skit by students</div>
+                    <div class="event-item">⭐  11:30 AM: Solo performance by Senior</div>
+                    <div class="event-item">⭐  11:40 AM: Solo performance by freshers</div>
+                    <div class="event-item">⭐  11:46 AM: Solo performance by Seniors</div>
+                    <div class="event-item">⭐  12:10 PM: Dance performances by Seniors</div>
+                    <div class="event-item">⭐  12:45 PM-01:30PM: Lunch</div>
+                    <div class="event-item">⭐  01:40 PM: Crowning and Gifting of Winners</div>
+                    <div class="event-item">⭐  02:00 PM: Vote of thanks</div>
+                </div>
+            </section>
+
+            <section id="venue" class="page">
+                <h1>Location: Sir Arthur Cotton Block</h1>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911.5813094508921!2d82.08015433821605!3d16.61860576621125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37f054d8e88533%3A0xee2101c4fafc77ae!2sCollege%20Rd%2C%20Cheyyeru%20Gunnepalli%2C%20Cheyyeru%2C%20Andhra%20Pradesh%20533222!5e0!3m2!1sen!2sin!4v1769523073503!5m2!1sen!2sin" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <section id="contact" class="page">
+                <h2>Contact Us</h2><br>
+                <p>Event Coordinators: Diploma Faculty</p><br>
+                <p>Email: diploma@sriniet.edu.in</p>
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                <p>Developed by@Diploma CC:403</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

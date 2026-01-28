@@ -1,0 +1,149 @@
+:root {
+    --neon-pink: #ff007f;
+    --neon-blue: #00f2ff;
+    --bg-dark: #050505;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-dark);
+    color: white;
+    overflow-x: hidden;
+    cursor: none; /* Custom cursor used instead */
+}
+
+/* Background Animation */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, #120458, #000000, #4b0082);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Custom Cursor */
+#cursor-tag {
+    position: fixed;
+    background: var(--neon-pink);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 10000;
+    box-shadow: 0 0 15px var(--neon-pink);
+    transform: translate(-50%, -50%);
+}
+
+/* Login Page Styling */
+.overlay {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.9);
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid var(--neon-blue);
+    text-align: center;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    background: var(--neon-pink);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--neon-blue);
+}
+
+/* Content Transitions */
+.page {
+    display: none;
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Invitation Cards */
+.invite-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.invite-card {
+    padding: 30px;
+    width: 300px;
+    background: rgba(255,255,255,0.05);
+    border-top: 4px solid var(--neon-pink);
+    border-radius: 10px;
+}
